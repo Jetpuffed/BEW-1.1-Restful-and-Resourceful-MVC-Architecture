@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+      <h1>Get your fortune!</h1>
+      <form action="/fortune_results" method="GET" class="fortune-form">
+            <h3>What's your name?</h3>
+            <input type="text" name="name" id="name" required>
+
+            <h3>Have you ever breathed?</h3>
+            <input type="radio" id="breathe" name="breathe" value="yes"> Yes
+            <input type="radio" id="breathe" name="breathe" value="no"> No
+
+            <h3>What's your favorite color?</h3>
+            <input type="color" name="favcolor" value="#ff0000">
+
+            <h3>What pet do you own?</h3>
+            <input type="checkbox" id="pet" name="animal" value="dog"> Dog
+            <input type="checkbox" id="pet" name="animal" value="cat"> Cat
+            <input type="checkbox" id="pet" name="animal" value="other"> Other
+
+            </br><input type="submit" value="Submit">
+      </form>
+</center>
+{% endblock %}

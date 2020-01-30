@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Reptimart - List</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.4/examples/sign-in/signin.css" rel="stylesheet">
+
+  </head>
+
+  {% include 'partials/navbar.html' %}
+
+  <body class="text-center">
+    <form class="form-signin" method="POST" action="/marketplace">
+      <h1 class="h3 mb-3 font-weight-normal">Create A Listing</h1>
+      <label for="classifieds-title" class="sr-only">Title</label>
+      <input name="title" type="text" id="classifieds-title" class="form-control" placeholder="Title" value="{{ listing.title }}" required autofocus>
+      <label for="classifieds-price" class="sr-only">Price</label>
+      <input name="price" type="text" id="classifieds-price" class="form-control" placeholder="Price" value="{{ listing.price }}" required>
+      <label for="classifieds-picture" class="sr-only">Picture</label>
+      <input name="picture" type="text" id="classifieds-picture" class="form-control" placeholder="Picture (Direct Link)" value="{{ listing.thumbnail }}" required>
+      <div class="my-3">
+        <label for="classifieds-shipping" class="sr-only">Shipping</label>
+        <select name="shipping" id="classifieds-shipping" value="{{ listing.shipping }}">
+            <option value="One Day">Shipping Timeframe: One Day</option>
+            <option value="Two Days">Shipping Timeframe: Two Day</option>
+            <option value="Three Days">Shipping Timeframe: Three Day</option>
+            <option value="One to Two Weeks">Shipping Timeframe: Within 1-2 Weeks</option>
+            <option value="Three to Four Weeks">Shipping Timeframe: Within 3-4 Weeks</option>
+            <option value="Five to Six Weeks">Shipping Timeframe: Within 5-6 Weeks</option>
+        </select>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Post Listing</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2019 Reptimart, LLC. All Rights Reserved.</p>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
